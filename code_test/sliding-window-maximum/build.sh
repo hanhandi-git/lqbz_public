@@ -1,0 +1,1 @@
+g++ -std=c++11 sliding_window_maximum_test.cpp -o sliding_window_maximum_test

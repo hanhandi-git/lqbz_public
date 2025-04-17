@@ -1,0 +1,1 @@
+g++ -o batchExecutor main.cpp -std=c++11 -pthread

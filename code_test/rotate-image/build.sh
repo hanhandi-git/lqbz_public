@@ -1,0 +1,1 @@
+g++ -std=c++11 rotate_image_test.cpp -o rotate_image_test

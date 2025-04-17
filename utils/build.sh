@@ -1,0 +1,1 @@
+g++ -std=c++11 citizen.cpp -o citizen
