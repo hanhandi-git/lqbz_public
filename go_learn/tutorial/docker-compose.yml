@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+  go-dev:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: go-development
+    volumes:
+      # 将当前目录挂载到容器的/app目录
+      - .:/app
+      # 挂载Go模块缓存，避免重复下载依赖
+      - go-modules:/go/pkg/mod
+    # ports:
+    #   # 为可能的Web应用预留端口
+    #   - "8080:8080"
+    environment:
+      - TZ=Asia/Shanghai
+    # 开启伪终端，使终端体验更好
+    tty: true
+    # 以交互模式运行
+    stdin_open: true
+
+volumes:
+  go-modules:
+    # 持久化Go模块缓存
